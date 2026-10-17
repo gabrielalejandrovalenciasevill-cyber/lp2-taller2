@@ -28,5 +28,56 @@
     "stock": 0,
     "activo": true,
     "categoria": "Audio"
+  },
+  {
+    "sku": "TEC-003",
+    "marca": "Logitech",
+    "nombre": "Teclado inalámbrico K380",
+    "precio": 159900,
+    "foto": "images/teclado-k380.jpg",
+    "stock": 15,
+    "activo": true,
+    "categoria": "Periféricos"
+  },
+  {
+    "sku": "TEC-004",
+    "marca": "Redragon",
+    "nombre": "Mouse gamer M601",
+    "precio": 89900,
+    "foto": "images/mouse-redragon.jpg",
+    "stock": 20,
+    "activo": true,
+    "categoria": "Periféricos"
+  },
+  {
+    "sku": "ALM-001",
+    "marca": "Samsung",
+    "nombre": "Memoria microSD 128GB",
+    "precio": 59900,
+    "foto": "images/microsd-samsung.jpg",
+    "stock": 25,
+    "activo": true,
+    "categoria": "Almacenamiento"
+  },
+  {
+    "sku": "AUD-002",
+    "marca": "JBL",
+    "nombre": "Audífonos Tune 510BT",
+    "precio": 179900,
+    "foto": "images/audifonos-jbl.jpg",
+    "stock": 10,
+    "activo": true,
+    "categoria": "Audio"
+  },
+  {
+    "sku": "ALM-002",
+    "marca": "Kingston",
+    "nombre": "Memoria USB 128GB",
+    "precio": 54900,
+    "foto": "images/usb-kingston-128gb.jpg",
+    "stock": 0,
+    "activo": true,
+    "categoria": "Almacenamiento"
   }
 ]
+  

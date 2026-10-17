@@ -19,48 +19,46 @@ main = Blueprint("main", __name__)
 def index():
     """Página principal: catálogo de productos desde la base de datos.
 
-    Soporta filtro opcional por categoría mediante query string:
-        /?categoria=<id>
-    """
-    # Lee el parámetro ?categoria= de la URL (None si no viene).
+   # TODO 1: Leer el filtro opcional de categoría.
     categoria_id = request.args.get("categoria", type=int)
 
-    # TODO 1: Si categoria_id tiene valor, consulta solo los productos de
-    #         esa categoría:
-    #             productos = Producto.query.filter_by(
-    #                 categoria_id=categoria_id).all()
-    #         Si no viene, trae todos los productos:
-    #             productos = Producto.query.all()
+    # Consultar productos según la categoría seleccionada.
+    if categoria_id is not None:
+        productos = Producto.query.filter_by(
+            categoria_id=categoria_id
+        ).all()
+    else:
+        productos = Producto.query.all()
 
-    # TODO 2: Consulta todas las categorías para pintar el menú de filtros:
-    #         categorias = Categoria.query.order_by(Categoria.nombre).all()
+    # TODO 2: Consultar todas las categorías ordenadas por nombre.
+    categorias = Categoria.query.order_by(Categoria.nombre).all()
 
-    # TODO 3: Renderiza "index.html" enviando 'productos', 'categorias' y
-    #         'categoria_id' (para marcar el filtro activo).
-    pass
+    # TODO 3: Mostrar el catálogo y enviar los datos al HTML.
+    return render_template(
+        "index.html",
+        productos=productos,
+        categorias=categorias,
+        categoria_id=categoria_id
+    )
 
 
 @main.route("/producto/<sku>")
 def detalle(sku):
-    """Detalle de un producto, buscado por su SKU en la base de datos."""
+    """Mostrar el detalle de un producto mediante su SKU."""
 
-    # TODO 4: Busca el producto por SKU. La forma más limpia es:
-    #             producto = Producto.query.filter_by(sku=sku).first_or_404()
-    #         first_or_404() devuelve el objeto o lanza un 404 automáticamente,
-    #         así te ahorras el 'if producto is None: abort(404)'.
+    # TODO 4: Buscar el producto por su SKU.
+    producto = Producto.query.filter_by(sku=sku).first_or_404()
 
-    # TODO 5: Renderiza "detalle.html" pasándole el producto.
-    pass
+    # TODO 5: Mostrar la página de detalle.
+    return render_template("detalle.html", producto=producto)
 
 
 @main.route("/categorias")
 def categorias():
-    """Lista de categorías con la cantidad de productos de cada una."""
+    """Mostrar las categorías y sus productos."""
 
-    # TODO 6: Consulta todas las categorías ordenadas por nombre.
-    #         Gracias al backref definido en el modelo, dentro del template
-    #         puedes usar categoria.productos para contar sus productos
-    #         con el filtro |length de Jinja2.
+    # TODO 6: Consultar las categorías ordenadas por nombre.
+    categorias = Categoria.query.order_by(Categoria.nombre).all()
 
-    # TODO 7: Renderiza "categorias.html" con la lista obtenida.
-    pass
+    # TODO 7: Mostrar la página de categorías.
+    return render_template("categorias.html", categorias=categorias)
