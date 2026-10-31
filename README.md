@@ -7,17 +7,14 @@
 
 ## Autor
 
-- [@gabriel alejandro valencia sevillano](https://www.github.com/gabriel alejandro valenciia sevillano)
+- [@gabriel alejandro valencia sevillano](https://www.github.com/)
 
 ## Descripción del Proyecto
+Este proyecto consiste en el desarrollo de una tienda virtual utilizando Python y Flask. El sistema permite visualizar un catálogo de productos, consultar sus detalles y filtrar los productos por categoría. En esta segunda versión se incorpora SQLAlchemy como ORM y SQLite como sistema de almacenamiento de datos, permitiendo gestionar las categorías y los productos mediante una base de datos.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut quam dolor. Quisque elementum est sed massa gravida convallis. Donec volutpat turpis eget lectus feugiat congue. Morbi rutrum auctor eleifend. Etiam iaculis libero tellus, vel aliquet erat tempor sed. Duis efficitur quam vel sapien luctus, sed semper lacus mollis. Suspendisse non nunc eleifend, aliquet elit eget, condimentum augue.
+.Tecnologías utilizadas .Python .Flask .Flask-SQLAlchemy .SQLAlchemy SQLite .HTML y Jinja2 .Git y GitHub
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vel nibh fringilla, porta elit vel, consequat libero. Nulla et libero ac nulla ultricies sollicitudin. Sed viverra non nulla id convallis. Morbi vel varius lacus, in maximus nunc. Praesent sed semper diam. Pellentesque vehicula nulla augue, ut porta dolor consequat at.
+Funcionalidades de mi proyecto Visualización del catálogo de productos. Filtrado de productos por categoría. Consulta de los detalles de cada producto. Visualización de marca, SKU, precio, categoría y stock. Identificación de productos disponibles y agotados. Administración de categorías relacionadas con sus productos. Inicialización, reinicio y carga de datos mediante comandos de Flask. Prevención de productos duplicados durante la carga inicial. Respuesta 404 cuando se consulta un producto inexistente.
 
-## Proceso
-
-Morbi quam lectus, tempus sit amet mi non, facilisis dignissim erat. Aenean tortor libero, rhoncus eu eleifend ut, volutpat id nisi. Ut porta eros at ante rutrum pharetra. Integer nec nulla dictum, vestibulum ligula id, hendrerit ex. Morbi eget tortor metus.
-
-[GUIA.md](docs/GUIA.md)
-
+Proceso
+El desarrollo del taller se realizó mediante los siguientes pasos: Configuración de la aplicación Flask. Configuración de SQLAlchemy y SQLite. Definición de los modelos Categoria y Producto. Implementación de comandos para crear, reiniciar y cargar la base de datos. Desarrollo de las rutas del catálogo, las categorías y el detalle del producto. Implementación de las plantillas HTML con Jinja2 Carga de productos desde un archivo JSON. Pruebas funcionales y publicación de los cambios en GitHub. GUIA.md
